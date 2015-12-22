@@ -9,15 +9,20 @@
 import UIKit
 
 class EventsTableViewController: UITableViewController {
-
+    
+    var events = [Event]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        loadSampleEvents()
+    }
+    
+    func loadSampleEvents() {
+        let p1 = UIImage(named: "photo1")!
+        let p2 = UIImage(named: "photo2")!
+        let a = Event(name: "Engineering Festival", photo: p1, date: "February 20 - 21", location: "Reitz Union Center", desc: "a")!
+        let b = Event(name: "Hour of Code", photo: p2, date: "January 21 - 23", location: "The Fishbowl", desc: "b")!
+            events+=[a, b]
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,24 +33,26 @@ class EventsTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return events.count
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
-        // Configure the cell...
-
+        let cellIdentifier = "EventsTableViewCell"
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! EventsTableViewCell
+        let event = events[indexPath.row]
+        cell.eventTitle.text = event.name
+        cell.eventDate.text = event.date
+        cell.eventLocation.text = event.location
+        //cell.eventDesc.text = event.desc
+        cell.eventPhoto.image = event.photo
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

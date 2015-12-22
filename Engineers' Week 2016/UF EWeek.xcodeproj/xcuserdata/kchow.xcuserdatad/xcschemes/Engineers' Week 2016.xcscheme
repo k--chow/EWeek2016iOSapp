@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "30CBB7651C2659970034F617"
-               BuildableName = "UF EWeek 2016.app"
+               BuildableName = "UF EWeek.app"
                BlueprintName = "UF EWeek"
                ReferencedContainer = "container:UF EWeek.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "30CBB7651C2659970034F617"
-            BuildableName = "UF EWeek 2016.app"
+            BuildableName = "UF EWeek.app"
             BlueprintName = "UF EWeek"
             ReferencedContainer = "container:UF EWeek.xcodeproj">
          </BuildableReference>
@@ -66,7 +66,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "30CBB7651C2659970034F617"
-            BuildableName = "UF EWeek 2016.app"
+            BuildableName = "UF EWeek.app"
             BlueprintName = "UF EWeek"
             ReferencedContainer = "container:UF EWeek.xcodeproj">
          </BuildableReference>
@@ -85,7 +85,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "30CBB7651C2659970034F617"
-            BuildableName = "UF EWeek 2016.app"
+            BuildableName = "UF EWeek.app"
             BlueprintName = "UF EWeek"
             ReferencedContainer = "container:UF EWeek.xcodeproj">
          </BuildableReference>
