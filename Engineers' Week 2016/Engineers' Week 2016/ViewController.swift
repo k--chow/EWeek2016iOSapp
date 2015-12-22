@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+//for modal
 class ViewController: UIViewController {
 
     override func viewDidLoad() {

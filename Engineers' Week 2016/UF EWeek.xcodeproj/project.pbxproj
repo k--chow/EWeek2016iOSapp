@@ -13,6 +13,11 @@
 		30CBB7711C2659970034F617 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30CBB7701C2659970034F617 /* Assets.xcassets */; };
 		30CBB77F1C2659970034F617 /* Engineers__Week_2016Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CBB77E1C2659970034F617 /* Engineers__Week_2016Tests.swift */; };
 		30CBB7921C28EE8B0034F617 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CBB7911C28EE8B0034F617 /* Event.swift */; };
+		30CBB7961C28FB7F0034F617 /* DashTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CBB7951C28FB7F0034F617 /* DashTableViewController.swift */; };
+		30CBB7981C28FB990034F617 /* EventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CBB7971C28FB990034F617 /* EventsTableViewCell.swift */; };
+		30CBB79A1C28FC040034F617 /* EventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CBB7991C28FC040034F617 /* EventsTableViewController.swift */; };
+		30CBB79C1C28FC540034F617 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CBB79B1C28FC540034F617 /* Category.swift */; };
+		30CBB79E1C28FE210034F617 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CBB79D1C28FE210034F617 /* CategoryTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +41,11 @@
 		30CBB77E1C2659970034F617 /* Engineers__Week_2016Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Engineers__Week_2016Tests.swift; sourceTree = "<group>"; };
 		30CBB7801C2659970034F617 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30CBB7911C28EE8B0034F617 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Event.swift; path = ../Event.swift; sourceTree = "<group>"; };
+		30CBB7951C28FB7F0034F617 /* DashTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DashTableViewController.swift; path = ../DashTableViewController.swift; sourceTree = "<group>"; };
+		30CBB7971C28FB990034F617 /* EventsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventsTableViewCell.swift; path = ../EventsTableViewCell.swift; sourceTree = "<group>"; };
+		30CBB7991C28FC040034F617 /* EventsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventsTableViewController.swift; path = ../EventsTableViewController.swift; sourceTree = "<group>"; };
+		30CBB79B1C28FC540034F617 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		30CBB79D1C28FE210034F617 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +88,11 @@
 			isa = PBXGroup;
 			children = (
 				30CBB7911C28EE8B0034F617 /* Event.swift */,
+				30CBB7991C28FC040034F617 /* EventsTableViewController.swift */,
+				30CBB7971C28FB990034F617 /* EventsTableViewCell.swift */,
+				30CBB7951C28FB7F0034F617 /* DashTableViewController.swift */,
+				30CBB79D1C28FE210034F617 /* CategoryTableViewCell.swift */,
+				30CBB79B1C28FC540034F617 /* Category.swift */,
 				30CBB7691C2659970034F617 /* AppDelegate.swift */,
 				30CBB76B1C2659970034F617 /* ViewController.swift */,
 				30CBB76D1C2659970034F617 /* Main.storyboard */,
@@ -200,7 +215,12 @@
 			files = (
 				30CBB76C1C2659970034F617 /* ViewController.swift in Sources */,
 				30CBB7921C28EE8B0034F617 /* Event.swift in Sources */,
+				30CBB79A1C28FC040034F617 /* EventsTableViewController.swift in Sources */,
+				30CBB7981C28FB990034F617 /* EventsTableViewCell.swift in Sources */,
 				30CBB76A1C2659970034F617 /* AppDelegate.swift in Sources */,
+				30CBB7961C28FB7F0034F617 /* DashTableViewController.swift in Sources */,
+				30CBB79C1C28FC540034F617 /* Category.swift in Sources */,
+				30CBB79E1C28FE210034F617 /* CategoryTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
