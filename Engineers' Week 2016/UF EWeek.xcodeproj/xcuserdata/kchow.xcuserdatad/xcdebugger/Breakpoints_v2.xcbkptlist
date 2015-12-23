@@ -26,7 +26,7 @@
                   moduleName = "UF EWeek"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/kchow/Dropbox/projects/Eweek2016iOS/Engineers&apos;%20Week%202016/Event.swift"
-                  timestampString = "472512870.501315"
+                  timestampString = "472527722.114498"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -41,7 +41,7 @@
                   moduleName = "UF EWeek"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/kchow/Dropbox/projects/Eweek2016iOS/Engineers&apos;%20Week%202016/Event.swift"
-                  timestampString = "472512870.501557"
+                  timestampString = "472527722.114985"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -49,6 +49,22 @@
                   offsetFromSymbolStart = "12">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Engineers&apos; Week 2016/ViewController.swift"
+            timestampString = "472515561.421171"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "updateIP()"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

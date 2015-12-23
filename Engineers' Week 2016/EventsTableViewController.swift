@@ -11,7 +11,7 @@ import UIKit
 class EventsTableViewController: UITableViewController {
     
     var events = [Event]()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         loadSampleEvents()
