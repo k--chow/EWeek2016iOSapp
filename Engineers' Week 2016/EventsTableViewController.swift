@@ -14,7 +14,8 @@ class EventsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadSampleEvents()
+        getEvents()
+        //loadSampleEvents()
     }
     
     func loadSampleEvents() {
@@ -23,6 +24,56 @@ class EventsTableViewController: UITableViewController {
         let a = Event(name: "Engineering Festival", photo: p1, date: "February 20 - 21", location: "Reitz Union Center", desc: "a")!
         let b = Event(name: "Hour of Code", photo: p2, date: "January 21 - 23", location: "The Fishbowl", desc: "b")!
             events+=[a, b]
+    }
+    
+    func getEvents() {
+        // Setup the session to make REST GET call.  Notice the URL is https NOT http!!
+        let postEndpoint: String = "https://eweek2016.herokuapp.com/api/events"
+        let session = NSURLSession.sharedSession()
+        let url = NSURL(string: postEndpoint)!
+        
+        // Make the POST call and handle it in a completion handler
+        session.dataTaskWithURL(url, completionHandler: { ( data: NSData?, response: NSURLResponse?, error: NSError?) -> Void in
+            // Make sure we get an OK response
+            guard let realResponse = response as? NSHTTPURLResponse where
+                realResponse.statusCode == 200 else {
+                    print("Not a 200 response")
+                    return
+            }
+            
+            // Read the JSON
+            do {
+                
+                
+                let json: NSArray = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as! NSArray
+                
+                if let a = json[0] as? NSDictionary {
+                    let name = a["name"] as? String
+                    let date = a["date"] as? String
+                    let location = a["passcode"] as? String
+                    let desc = a["description"] as? String
+                    let p1 = UIImage(named: "photo1")!
+                    print(location)
+                    let event1 = Event(name: name!, photo: p1, date: date!, location: location!, desc: "desc")!
+                    self.events.append(event1)
+                    print("working")
+                    print(self.events[0].name)
+                    print(self.events[0].date)
+                    print(self.events[0].location)
+                    print(self.events[0].desc)
+                    
+                }
+                else
+                {
+                    print("nah")
+                }
+                
+                
+                
+            } catch {
+                print("bad things happened")
+            }
+        }).resume()
     }
 
     override func didReceiveMemoryWarning() {
