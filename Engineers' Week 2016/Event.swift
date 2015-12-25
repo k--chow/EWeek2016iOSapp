@@ -14,21 +14,24 @@ class Event: NSObject, NSCoding {
     var date: String
     var location: String
     var desc: String
+    var photoLink: String
     
     struct PropertyKey {
         static let nameKey = "name"
         static let photoKey = "photo"
         static let dateKey = "date"
         static let locationKey = "location"
-        static let descKey = "description"
+        static let descKey = "desc"
+        static let photoLinkKey = "photoLink"
     }
     
-    init?(name: String, photo: UIImage?, date: String, location: String, desc: String) {
+    init?(name: String, photo: UIImage?, date: String, location: String, desc: String, photoLink: String) {
         self.name = name;
         self.photo = photo;
         self.date = date;
         self.location = location;
         self.desc = desc;
+        self.photoLink = photoLink;
         
         super.init()
     }
@@ -39,6 +42,7 @@ class Event: NSObject, NSCoding {
         aCoder.encodeObject(date, forKey: PropertyKey.dateKey);
         aCoder.encodeObject(location, forKey: PropertyKey.locationKey)
         aCoder.encodeObject(desc, forKey: PropertyKey.descKey)
+        aCoder.encodeObject(photoLink, forKey: PropertyKey.photoLinkKey)
     }
     
     required convenience init?(coder aDecoder: NSCoder) {
@@ -47,6 +51,7 @@ class Event: NSObject, NSCoding {
         let date = aDecoder.decodeObjectForKey(PropertyKey.dateKey) as! String
         let location = aDecoder.decodeObjectForKey(PropertyKey.locationKey) as! String
         let desc = aDecoder.decodeObjectForKey(PropertyKey.descKey) as! String
-        self.init(name: name, photo: photo, date: date, location: location, desc: desc)
+        let photoLink = aDecoder.decodeObjectForKey(PropertyKey.photoLinkKey) as! String
+        self.init(name: name, photo: photo, date: date, location: location, desc: desc, photoLink: photoLink)
     }
 }

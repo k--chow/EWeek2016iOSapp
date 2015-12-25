@@ -14,17 +14,26 @@ class DashTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadSampleCategories()
+        //loadSampleCategories()
+        
        
     }
 
-    
+    /*
     func loadSampleCategories() {
         let events = Category(name: "Events", photo: nil)!
         let directors = Category(name: "Directors", photo: nil)!
         let about = Category(name: "About", photo: nil)!
+        let url = NSURL(string:"https://placeholdit.imgix.net/~text?txtsize=33&txt=90%C3%9790&w=90&h=90")
+        let data = NSData(contentsOfURL:url!)
+        if data != nil {
+            events.photo = UIImage(data:data!)
+            directors.photo = UIImage(data: data!)
+            about.photo = UIImage(data: data!)
+        }
+
         categories += [events, directors, about]
-    }
+    }*/
     
 
     override func didReceiveMemoryWarning() {

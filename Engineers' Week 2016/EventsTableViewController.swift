@@ -10,21 +10,17 @@ import UIKit
 
 class EventsTableViewController: UITableViewController {
     
-    var events = [Event]()
+    @IBOutlet weak var refreshButton: UIBarButtonItem!
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         getEvents()
+        //getImage()
         //loadSampleEvents()
     }
     
-    func loadSampleEvents() {
-        let p1 = UIImage(named: "photo1")!
-        let p2 = UIImage(named: "photo2")!
-        let a = Event(name: "Engineering Festival", photo: p1, date: "February 20 - 21", location: "Reitz Union Center", desc: "a")!
-        let b = Event(name: "Hour of Code", photo: p2, date: "January 21 - 23", location: "The Fishbowl", desc: "b")!
-            events+=[a, b]
-    }
     
     func getEvents() {
         // Setup the session to make REST GET call.  Notice the URL is https NOT http!!
@@ -46,34 +42,45 @@ class EventsTableViewController: UITableViewController {
                 
                 
                 let json: NSArray = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as! NSArray
-                
-                if let a = json[0] as? NSDictionary {
+                print(json.count)
+                for(var i=0; i<json.count; i++)
+                {
+                if let a = json[i] as? NSDictionary {
                     let name = a["name"] as? String
                     let date = a["date"] as? String
                     let location = a["passcode"] as? String
                     let desc = a["description"] as? String
-                    let p1 = UIImage(named: "photo1")!
-                    print(location)
-                    let event1 = Event(name: name!, photo: p1, date: date!, location: location!, desc: "desc")!
+                    let photoLink = a["image"] as? String
+                    let event1 = Event(name: name!, photo: nil, date: date!, location: location!, desc: "descartes", photoLink: photoLink!)!
+                    self.getImage(event1)
                     self.events.append(event1)
-                    print("working")
-                    print(self.events[0].name)
-                    print(self.events[0].date)
-                    print(self.events[0].location)
-                    print(self.events[0].desc)
+                    
                     
                 }
-                else
-                {
-                    print("nah")
+                    else
+                    {
+                    print(i)
+                    }
                 }
-                
+                self.tableView.reloadData()
                 
                 
             } catch {
                 print("bad things happened")
             }
         }).resume()
+        
+    }
+    
+    func getImage(event: Event) {
+        let url2 = NSURL(string: event.photoLink)
+        let data = NSData(contentsOfURL:url2!)
+        if data != nil {
+            event.photo = UIImage(data:data!)
+            //print("ho")
+            self.tableView.reloadData()
+        }
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -93,6 +100,7 @@ class EventsTableViewController: UITableViewController {
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        //getEvents()
         let cellIdentifier = "EventsTableViewCell"
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! EventsTableViewCell
         let event = events[indexPath.row]

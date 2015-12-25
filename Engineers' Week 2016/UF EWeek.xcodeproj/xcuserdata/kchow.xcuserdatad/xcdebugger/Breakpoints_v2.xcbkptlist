@@ -6,11 +6,11 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Event.swift"
-            timestampString = "472444646.863389"
+            timestampString = "472674622.543699"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "16"
@@ -19,29 +19,44 @@
             landmarkType = "3">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UF_EWeek.Event.desc.getter : Swift.String"
+                  moduleName = "UF EWeek"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kchow/Dropbox/projects/Eweek2016iOS/Engineers&apos;%20Week%202016/Event.swift"
+                  timestampString = "472668140.692988"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "UF_EWeek.Event.desc.setter : Swift.String"
                   moduleName = "UF EWeek"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/kchow/Dropbox/projects/Eweek2016iOS/Engineers&apos;%20Week%202016/Event.swift"
-                  timestampString = "472624562.919794"
+                  timestampString = "472668140.693264"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
                   endingLineNumber = "0"
-                  offsetFromSymbolStart = "24">
+                  offsetFromSymbolStart = "44">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "UF_EWeek.Event.desc.materializeForSet : Swift.String"
                   moduleName = "UF EWeek"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/kchow/Dropbox/projects/Eweek2016iOS/Engineers&apos;%20Week%202016/Event.swift"
-                  timestampString = "472624562.919974"
+                  timestampString = "472668140.693464"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -65,6 +80,285 @@
             endingLineNumber = "15"
             landmarkName = "updateIP()"
             landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EventsTableViewCell.swift"
+            timestampString = "472667655.11357"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "EventsTableViewCell"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UF_EWeek.EventsTableViewCell.eventDate.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UILabel&gt;"
+                  moduleName = "UF EWeek"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kchow/Dropbox/projects/Eweek2016iOS/Engineers&apos;%20Week%202016/EventsTableViewCell.swift"
+                  timestampString = "472667655.133991"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UF_EWeek.EventsTableViewCell.eventDate.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UILabel&gt;"
+                  moduleName = "UF EWeek"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kchow/Dropbox/projects/Eweek2016iOS/Engineers&apos;%20Week%202016/EventsTableViewCell.swift"
+                  timestampString = "472667655.134501"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UF_EWeek.EventsTableViewCell.eventDate.materializeForSet : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UILabel&gt;"
+                  moduleName = "UF EWeek"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kchow/Dropbox/projects/Eweek2016iOS/Engineers&apos;%20Week%202016/EventsTableViewCell.swift"
+                  timestampString = "472667655.134653"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UF_EWeek.EventsTableViewCell.init (UF_EWeek.EventsTableViewCell.Type)(style : __C.UITableViewCellStyle, reuseIdentifier : Swift.Optional&lt;Swift.String&gt;) -&gt; UF_EWeek.EventsTableViewCell"
+                  moduleName = "UF EWeek"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kchow/Dropbox/projects/Eweek2016iOS/Engineers&apos;%20Week%202016/EventsTableViewCell.swift"
+                  timestampString = "472667655.134821"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "448">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UF_EWeek.EventsTableViewCell.init (UF_EWeek.EventsTableViewCell.Type)(coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;UF_EWeek.EventsTableViewCell&gt;"
+                  moduleName = "UF EWeek"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kchow/Dropbox/projects/Eweek2016iOS/Engineers&apos;%20Week%202016/EventsTableViewCell.swift"
+                  timestampString = "472667655.135167"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "396">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EventsTableViewCell.swift"
+            timestampString = "472673936.737239"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "EventsTableViewCell"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UF_EWeek.EventsTableViewCell.eventTitle.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UILabel&gt;"
+                  moduleName = "UF EWeek"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kchow/Dropbox/projects/Eweek2016iOS/Engineers&apos;%20Week%202016/EventsTableViewCell.swift"
+                  timestampString = "472679813.54549"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UF_EWeek.EventsTableViewCell.eventTitle.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UILabel&gt;"
+                  moduleName = "UF EWeek"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kchow/Dropbox/projects/Eweek2016iOS/Engineers&apos;%20Week%202016/EventsTableViewCell.swift"
+                  timestampString = "472679813.545911"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UF_EWeek.EventsTableViewCell.eventTitle.materializeForSet : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UILabel&gt;"
+                  moduleName = "UF EWeek"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kchow/Dropbox/projects/Eweek2016iOS/Engineers&apos;%20Week%202016/EventsTableViewCell.swift"
+                  timestampString = "472679813.546369"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UF_EWeek.EventsTableViewCell.init (UF_EWeek.EventsTableViewCell.Type)(style : __C.UITableViewCellStyle, reuseIdentifier : Swift.Optional&lt;Swift.String&gt;) -&gt; UF_EWeek.EventsTableViewCell"
+                  moduleName = "UF EWeek"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kchow/Dropbox/projects/Eweek2016iOS/Engineers&apos;%20Week%202016/EventsTableViewCell.swift"
+                  timestampString = "472679813.546628"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "96">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UF_EWeek.EventsTableViewCell.init (UF_EWeek.EventsTableViewCell.Type)(coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;UF_EWeek.EventsTableViewCell&gt;"
+                  moduleName = "UF EWeek"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kchow/Dropbox/projects/Eweek2016iOS/Engineers&apos;%20Week%202016/EventsTableViewCell.swift"
+                  timestampString = "472679813.546873"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "60">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EventsTableViewCell.swift"
+            timestampString = "472681227.216506"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "EventsTableViewCell"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UF_EWeek.EventsTableViewCell.eventPhoto.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UIImageView&gt;"
+                  moduleName = "UF EWeek"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kchow/Dropbox/projects/Eweek2016iOS/Engineers&apos;%20Week%202016/EventsTableViewCell.swift"
+                  timestampString = "472681227.265766"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UF_EWeek.EventsTableViewCell.eventPhoto.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UIImageView&gt;"
+                  moduleName = "UF EWeek"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kchow/Dropbox/projects/Eweek2016iOS/Engineers&apos;%20Week%202016/EventsTableViewCell.swift"
+                  timestampString = "472681227.265982"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UF_EWeek.EventsTableViewCell.eventPhoto.materializeForSet : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UIImageView&gt;"
+                  moduleName = "UF EWeek"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kchow/Dropbox/projects/Eweek2016iOS/Engineers&apos;%20Week%202016/EventsTableViewCell.swift"
+                  timestampString = "472681227.266112"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UF_EWeek.EventsTableViewCell.init (UF_EWeek.EventsTableViewCell.Type)(style : __C.UITableViewCellStyle, reuseIdentifier : Swift.Optional&lt;Swift.String&gt;) -&gt; UF_EWeek.EventsTableViewCell"
+                  moduleName = "UF EWeek"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kchow/Dropbox/projects/Eweek2016iOS/Engineers&apos;%20Week%202016/EventsTableViewCell.swift"
+                  timestampString = "472681227.266233"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "560">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UF_EWeek.EventsTableViewCell.init (UF_EWeek.EventsTableViewCell.Type)(coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;UF_EWeek.EventsTableViewCell&gt;"
+                  moduleName = "UF EWeek"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kchow/Dropbox/projects/Eweek2016iOS/Engineers&apos;%20Week%202016/EventsTableViewCell.swift"
+                  timestampString = "472681227.266368"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "508">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
