@@ -1,23 +1,18 @@
 //
-//  EventsTableViewCell.swift
+//  DirectorTableViewCell.swift
 //  UF EWeek
 //
-//  Created by Kevin Chow on 12/21/15.
+//  Created by Kevin Chow on 12/26/15.
 //  Copyright © 2015 Kevin Chow. All rights reserved.
 //
 
 import UIKit
 
-class EventsTableViewCell: UITableViewCell {
+class DirectorTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var eventTitle: UILabel!
-    @IBOutlet weak var eventLocation: UILabel!
-    
-    @IBOutlet weak var eventDate: UILabel!
-
-    @IBOutlet weak var eventPhoto: UIImageView!
-    
-    @IBOutlet weak var eventSociety: UILabel!
+    @IBOutlet weak var directorName: UILabel!
+    @IBOutlet weak var directorPosition: UILabel!
+    @IBOutlet weak var directorPhoto: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

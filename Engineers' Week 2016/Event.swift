@@ -15,6 +15,8 @@ class Event: NSObject, NSCoding {
     var location: String
     var desc: String
     var photoLink: String
+    var society: String
+    var director: String
     
     struct PropertyKey {
         static let nameKey = "name"
@@ -23,15 +25,19 @@ class Event: NSObject, NSCoding {
         static let locationKey = "location"
         static let descKey = "desc"
         static let photoLinkKey = "photoLink"
+        static let societyKey = "society"
+        static let directorKey = "director"
     }
     
-    init?(name: String, photo: UIImage?, date: String, location: String, desc: String, photoLink: String) {
+    init?(name: String, photo: UIImage?, date: String, location: String, desc: String, photoLink: String, society: String, director: String) {
         self.name = name;
         self.photo = photo;
         self.date = date;
         self.location = location;
         self.desc = desc;
         self.photoLink = photoLink;
+        self.society = society;
+        self.director = director;
         
         super.init()
     }
@@ -43,6 +49,8 @@ class Event: NSObject, NSCoding {
         aCoder.encodeObject(location, forKey: PropertyKey.locationKey)
         aCoder.encodeObject(desc, forKey: PropertyKey.descKey)
         aCoder.encodeObject(photoLink, forKey: PropertyKey.photoLinkKey)
+        aCoder.encodeObject(society, forKey: PropertyKey.societyKey)
+        aCoder.encodeObject(director, forKey: PropertyKey.directorKey)
     }
     
     required convenience init?(coder aDecoder: NSCoder) {
@@ -52,6 +60,8 @@ class Event: NSObject, NSCoding {
         let location = aDecoder.decodeObjectForKey(PropertyKey.locationKey) as! String
         let desc = aDecoder.decodeObjectForKey(PropertyKey.descKey) as! String
         let photoLink = aDecoder.decodeObjectForKey(PropertyKey.photoLinkKey) as! String
-        self.init(name: name, photo: photo, date: date, location: location, desc: desc, photoLink: photoLink)
+        let society = aDecoder.decodeObjectForKey(PropertyKey.societyKey) as! String
+        let director = aDecoder.decodeObjectForKey(PropertyKey.directorKey) as! String
+        self.init(name: name, photo: photo, date: date, location: location, desc: desc, photoLink: photoLink, society: society, director: director)
     }
 }

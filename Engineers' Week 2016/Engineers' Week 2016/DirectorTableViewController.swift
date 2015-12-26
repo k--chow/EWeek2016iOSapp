@@ -1,30 +1,26 @@
 //
-//  EventsTableViewController.swift
+//  DirectorTableViewController.swift
 //  UF EWeek
 //
-//  Created by Kevin Chow on 12/21/15.
+//  Created by Kevin Chow on 12/26/15.
 //  Copyright © 2015 Kevin Chow. All rights reserved.
 //
 
 import UIKit
 
-class EventsTableViewController: UITableViewController {
-    
-    @IBOutlet weak var refreshButton: UIBarButtonItem!
-    var events = [Event]()
-    
+class DirectorTableViewController: UITableViewController {
 
+    var directors = [Director]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        getEvents()
-        //getImage()
-        //loadSampleEvents()
+        self.tableView.rowHeight = UITableViewAutomaticDimension;
+        self.tableView.estimatedRowHeight = 138.0;
+        getDirectors()
     }
     
-    
-    func getEvents() {
-        // Setup the session to make REST GET call.  Notice the URL is https NOT http!!
-        let postEndpoint: String = "https://eweek2016.herokuapp.com/api/events"
+    func getDirectors() {
+        let postEndpoint: String = "https://eweek2016.herokuapp.com/api/directors"
         let session = NSURLSession.sharedSession()
         let url = NSURL(string: postEndpoint)!
         
@@ -45,30 +41,22 @@ class EventsTableViewController: UITableViewController {
                 print(json.count)
                 for(var i=0; i<json.count; i++)
                 {
-                if let a = json[i] as? NSDictionary {
-                    let name = a["name"] as? String
-                    let date = a["date"] as? String
-                    let location = a["location"] as? String
-                    let desc = a["description"] as? String
-                    let photoLink = a["image"] as? String
-                    
-                    let event1 = Event(name: name!, photo: nil, date: date!, location: location!, desc: desc!, photoLink: photoLink!, society: "", director: "")!
-                    //check if society exists
-                    if let society = a["society"] as? String {
-                        event1.society = society;
+                    if let a = json[i] as? NSDictionary {
+                        let name = a["name"] as? String
+                        let position = a["position"] as? String
+                        let photoLink = a["image"] as? String
+                        
+                        
+                        let director1 = Director(name: name!, photo: nil, photoLink: photoLink!, position: position!)!
+                        
+                        self.getImage(director1)
+                        self.directors.append(director1)
+                        
+                        
                     }
-                    //check if director exists
-                    if let director = a["director"] as? String {
-                        event1.director = director;
-                    }
-                    self.getImage(event1)
-                    self.events.append(event1)
-                    
-                    
-                }
                     else
                     {
-                    print(i)
+                        print(i)
                     }
                 }
                 self.tableView.reloadData()
@@ -78,18 +66,18 @@ class EventsTableViewController: UITableViewController {
                 print("bad things happened")
             }
         }).resume()
-        
+
     }
     
-    func getImage(event: Event) {
-        let url2 = NSURL(string: event.photoLink)
+    func getImage(director: Director) {
+        let url2 = NSURL(string: director.photoLink)
         let data = NSData(contentsOfURL:url2!)
         if data != nil {
-            event.photo = UIImage(data:data!)
+            director.photo = UIImage(data:data!)
             //print("ho")
             self.tableView.reloadData()
         }
-
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -104,34 +92,18 @@ class EventsTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return events.count
+        return directors.count
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        //getEvents()
-        let cellIdentifier = "EventsTableViewCell"
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! EventsTableViewCell
-        let event = events[indexPath.row]
-        cell.eventTitle.text = event.name
-        cell.eventDate.text = event.date
-        cell.eventLocation.text = event.location
-        cell.eventSociety.text = event.society
-        //cell.eventDesc.text = event.desc
-        cell.eventPhoto.image = event.photo
+        let cellIdentifier = "DirectorTableViewCell"
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! DirectorTableViewCell
+        let director = directors[indexPath.row]
+        cell.directorName.text = director.name
+        cell.directorPosition.text = director.position
+        cell.directorPhoto.image = director.photo
         return cell
-    }
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "ShowDetail")
-        {
-            let eventDetailViewController = segue.destinationViewController as! EventViewController
-            if let selectedEventCell = sender as? EventsTableViewCell {
-                let indexPath = tableView.indexPathForCell(selectedEventCell)!
-                let selectedEvent = events[indexPath.row]
-                eventDetailViewController.event = selectedEvent
-            }
-        }
     }
     
 
@@ -180,7 +152,4 @@ class EventsTableViewController: UITableViewController {
     }
     */
 
-    @IBAction func refresh(sender: AnyObject) {
-        tableView.reloadData()
-    }
 }

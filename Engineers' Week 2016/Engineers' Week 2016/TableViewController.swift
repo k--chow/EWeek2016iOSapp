@@ -1,40 +1,24 @@
 //
-//  DashTableViewController.swift
+//  TableViewController.swift
 //  UF EWeek
 //
-//  Created by Kevin Chow on 12/21/15.
+//  Created by Kevin Chow on 12/25/15.
 //  Copyright © 2015 Kevin Chow. All rights reserved.
 //
 
 import UIKit
 
-class DashTableViewController: UITableViewController {
-    
-    var categories = [Category]()
+class TableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //loadSampleCategories()
-        
-       
+
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
-
-    /*
-    func loadSampleCategories() {
-        let events = Category(name: "Events", photo: nil)!
-        let directors = Category(name: "Directors", photo: nil)!
-        let about = Category(name: "About", photo: nil)!
-        let url = NSURL(string:"https://placeholdit.imgix.net/~text?txtsize=33&txt=90%C3%9790&w=90&h=90")
-        let data = NSData(contentsOfURL:url!)
-        if data != nil {
-            events.photo = UIImage(data:data!)
-            directors.photo = UIImage(data: data!)
-            about.photo = UIImage(data: data!)
-        }
-
-        categories += [events, directors, about]
-    }*/
-    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -44,25 +28,24 @@ class DashTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
+        // #warning Incomplete implementation, return the number of sections
+        return 0
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return categories.count
+        // #warning Incomplete implementation, return the number of rows
+        return 0
     }
 
     /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cellIdentifier = "CategoryTableViewCell"
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as!
-        CategoryTableViewCell
-        let category = categories[indexPath.row]
-        cell.nameLabel.text = category.name
-        cell.photoImageView.image = category.photo
-        
+        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+
+        // Configure the cell...
+
         return cell
-    }*/
-    
+    }
+    */
 
     /*
     // Override to support conditional editing of the table view.
