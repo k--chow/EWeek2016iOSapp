@@ -9,8 +9,6 @@
 import UIKit
 
 class EventsTableViewController: UITableViewController {
-    
-    @IBOutlet weak var refreshButton: UIBarButtonItem!
     var events = [Event]()
     
 
@@ -78,6 +76,7 @@ class EventsTableViewController: UITableViewController {
                 print("bad things happened")
             }
         }).resume()
+        self.tableView.reloadData()
         
     }
     
@@ -87,7 +86,7 @@ class EventsTableViewController: UITableViewController {
         if data != nil {
             event.photo = UIImage(data:data!)
             //print("ho")
-            self.tableView.reloadData()
+            
         }
 
     }
@@ -179,8 +178,13 @@ class EventsTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
     @IBAction func refresh(sender: AnyObject) {
-        tableView.reloadData()
+            //self.tableView.reloadData()
+        print("refresh")
+        
     }
+
+    
+
+    
 }

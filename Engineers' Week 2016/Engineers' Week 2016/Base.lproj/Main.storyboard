@@ -57,7 +57,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="Ba2-Wv-m58" kind="push" id="4xd-NW-Pp5"/>
+                                            <segue destination="BYZ-38-t0r" kind="push" id="1z0-8z-sLG"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="directorsCell" id="7YZ-h1-uRV">
@@ -158,9 +158,6 @@
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zq2-bX-0hb">
                                             <rect key="frame" x="528" y="8" width="64" height="120"/>
                                             <state key="normal" title="Check In"/>
-                                            <connections>
-                                                <segue destination="Ba2-Wv-m58" kind="push" id="un9-b4-gRK"/>
-                                            </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="February 22" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Db-dr-kvT">
                                             <rect key="frame" x="128" y="66" width="208" height="21"/>
@@ -192,9 +189,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Events" id="0a7-gx-9DQ">
-                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="2Is-5d-9by">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="eAD-Ek-PaZ">
                             <connections>
-                                <action selector="refresh:" destination="ZDJ-Z3-ezd" id="Zgz-rz-9YP"/>
+                                <action selector="refresh:" destination="ZDJ-Z3-ezd" id="r9V-9H-dmH"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -270,11 +267,7 @@ The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for t
                                                 <action selector="exit:" destination="Rha-9p-bX3" id="60f-Yr-J0D"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Check-In" id="vGW-mM-SFh">
-                                            <connections>
-                                                <segue destination="Ba2-Wv-m58" kind="push" id="We6-5K-jTl"/>
-                                            </connections>
-                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Check-In" id="vGW-mM-SFh"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -429,7 +422,7 @@ The events are highly anticipated and heavily attended by students at the univer
         <!--Check-In-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UF_EWeek" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CheckInViewController" customModule="UF_EWeek" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -437,13 +430,74 @@ The events are highly anticipated and heavily attended by students at the univer
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Event Code: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZjY-ao-HSb">
+                                <rect key="frame" x="20" y="219" width="98" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bqw-KF-Ywc">
+                                <rect key="frame" x="20" y="273" width="46" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KR9-La-L8J">
+                                <rect key="frame" x="139" y="332" width="161" height="216"/>
+                            </pickerView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BbF-II-qUA">
+                                <rect key="frame" x="139" y="162" width="161" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bxt-X2-tuK">
+                                <rect key="frame" x="139" y="215" width="161" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="et3-Ya-ONs">
+                                <rect key="frame" x="139" y="269" width="161" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Organization:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xm7-Os-qhm">
+                                <rect key="frame" x="20" y="429" width="103" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qaR-dq-dDJ">
+                                <rect key="frame" x="20" y="162" width="55" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="pZt-5V-56U" appends="YES" id="nU2-tK-ZtF"/>
+                        </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="Check-In" id="e96-cG-GVb"/>
+                    <navigationItem key="navigationItem" title="Check-In" id="e96-cG-GVb">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="rcC-TX-OvA"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="emailTextField" destination="et3-Ya-ONs" id="fb0-nQ-GvJ"/>
+                        <outlet property="eventTextField" destination="bxt-X2-tuK" id="ucz-Ug-ImS"/>
+                        <outlet property="nameTextField" destination="BbF-II-qUA" id="Hgk-Lf-vlB"/>
+                        <outlet property="organizationPicker" destination="KR9-La-L8J" id="xRw-Ja-T8P"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="pZt-5V-56U">
+                    <connections>
+                        <action selector="onTap:" destination="BYZ-38-t0r" id="fFm-Vd-Lp3"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2212" y="1109"/>
+            <point key="canvasLocation" x="1402" y="955"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="MLl-y8-ztg">
@@ -455,9 +509,6 @@ The events are highly anticipated and heavily attended by students at the univer
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Ba2-Wv-m58" kind="relationship" relationship="rootViewController" id="Vyd-1J-cNg"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y5x-rp-bb5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -481,30 +532,8 @@ The events are highly anticipated and heavily attended by students at the univer
             </objects>
             <point key="canvasLocation" x="174.93333333333334" y="400.44"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Uih-5o-pbL">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ba2-Wv-m58" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" id="jaC-H0-jtf"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ioM-Sa-FOK">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="6DG-9e-xsR"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rca-Ge-7Fo" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1616" y="1233"/>
-        </scene>
     </scenes>
     <resources>
         <image name="eweek2016" width="2048" height="1408"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="4xd-NW-Pp5"/>
-    </inferredMetricsTieBreakers>
 </document>

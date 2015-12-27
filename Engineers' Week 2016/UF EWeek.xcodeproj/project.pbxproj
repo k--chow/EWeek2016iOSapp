@@ -11,6 +11,7 @@
 		3079D6671C2F250D00BEA267 /* DirectorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3079D6661C2F250D00BEA267 /* DirectorTableViewController.swift */; };
 		3079D6691C2F254800BEA267 /* DirectorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3079D6681C2F254800BEA267 /* DirectorTableViewCell.swift */; };
 		3079D66B1C2F255C00BEA267 /* Director.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3079D66A1C2F255C00BEA267 /* Director.swift */; };
+		308475B81C306CA200737A57 /* CheckInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308475B71C306CA200737A57 /* CheckInViewController.swift */; };
 		30CBB76A1C2659970034F617 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CBB7691C2659970034F617 /* AppDelegate.swift */; };
 		30CBB76F1C2659970034F617 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30CBB76D1C2659970034F617 /* Main.storyboard */; };
 		30CBB7711C2659970034F617 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30CBB7701C2659970034F617 /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 		3079D6661C2F250D00BEA267 /* DirectorTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectorTableViewController.swift; sourceTree = "<group>"; };
 		3079D6681C2F254800BEA267 /* DirectorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectorTableViewCell.swift; sourceTree = "<group>"; };
 		3079D66A1C2F255C00BEA267 /* Director.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Director.swift; sourceTree = "<group>"; };
+		308475B71C306CA200737A57 /* CheckInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CheckInViewController.swift; path = ../CheckInViewController.swift; sourceTree = "<group>"; };
 		30CBB7661C2659970034F617 /* UF EWeek.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UF EWeek.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		30CBB7691C2659970034F617 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30CBB76E1C2659970034F617 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				3079D6661C2F250D00BEA267 /* DirectorTableViewController.swift */,
 				3079D6681C2F254800BEA267 /* DirectorTableViewCell.swift */,
 				3079D66A1C2F255C00BEA267 /* Director.swift */,
+				308475B71C306CA200737A57 /* CheckInViewController.swift */,
 				30CBB76D1C2659970034F617 /* Main.storyboard */,
 				30CBB7701C2659970034F617 /* Assets.xcassets */,
 				30CBB7751C2659970034F617 /* Info.plist */,
@@ -236,6 +239,7 @@
 				3079D6691C2F254800BEA267 /* DirectorTableViewCell.swift in Sources */,
 				30CBB79C1C28FC540034F617 /* Category.swift in Sources */,
 				30CBB79E1C28FE210034F617 /* CategoryTableViewCell.swift in Sources */,
+				308475B81C306CA200737A57 /* CheckInViewController.swift in Sources */,
 				3079D66B1C2F255C00BEA267 /* Director.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
