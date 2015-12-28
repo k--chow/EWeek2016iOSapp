@@ -20,7 +20,7 @@
                                         <rect key="frame" x="0.0" y="64" width="320" height="132"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0Pc-Sh-AFo" id="oxZ-0l-g3x">
-                                            <rect key="frame" x="0.0" y="0.0" width="287" height="131.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="132"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" placeholderIntrinsicWidth="90" placeholderIntrinsicHeight="90" image="eweek2016" translatesAutoresizingMaskIntoConstraints="NO" id="g5C-7g-OeZ">
@@ -42,7 +42,7 @@
                                         <rect key="frame" x="0.0" y="196" width="320" height="132"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3Ne-Gq-VXT" id="fQJ-cp-eVr">
-                                            <rect key="frame" x="0.0" y="0.0" width="287" height="131.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="132"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" placeholderIntrinsicWidth="90" placeholderIntrinsicHeight="90" image="eweek2016" translatesAutoresizingMaskIntoConstraints="NO" id="eVW-8x-XdJ">
@@ -64,7 +64,7 @@
                                         <rect key="frame" x="0.0" y="328" width="320" height="132"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7YZ-h1-uRV" id="MXW-dw-LJa">
-                                            <rect key="frame" x="0.0" y="0.0" width="287" height="131.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="132"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" placeholderIntrinsicWidth="90" placeholderIntrinsicHeight="90" image="eweek2016" translatesAutoresizingMaskIntoConstraints="NO" id="Ro8-mv-RjE">
@@ -86,7 +86,7 @@
                                         <rect key="frame" x="0.0" y="460" width="320" height="132"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="n2b-Yv-Up1" id="8Ix-8p-2Qj">
-                                            <rect key="frame" x="0.0" y="0.0" width="287" height="131.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="132"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" placeholderIntrinsicWidth="90" placeholderIntrinsicHeight="90" image="eweek2016" translatesAutoresizingMaskIntoConstraints="NO" id="fz2-lH-hBu">
@@ -131,7 +131,7 @@
                                 <rect key="frame" x="0.0" y="92" width="320" height="138"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="79Y-qL-jf1" id="UKe-8W-IpK">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="137.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="138"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JXK-aG-iiB">
@@ -377,7 +377,7 @@ The events are highly anticipated and heavily attended by students at the univer
                                 <rect key="frame" x="0.0" y="92" width="320" height="137"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" tableViewCell="LTw-co-Q6X" id="DbS-iO-Ej0">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="136.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="137"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vhy-kz-Ybj">
@@ -431,6 +431,12 @@ The events are highly anticipated and heavily attended by students at the univer
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qaR-dq-dDJ">
+                                <rect key="frame" x="20" y="162" width="55" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Event Code: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZjY-ao-HSb">
                                 <rect key="frame" x="20" y="219" width="98" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -456,23 +462,17 @@ The events are highly anticipated and heavily attended by students at the univer
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="et3-Ya-ONs">
-                                <rect key="frame" x="139" y="269" width="161" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Organization:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xm7-Os-qhm">
                                 <rect key="frame" x="20" y="429" width="103" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qaR-dq-dDJ">
-                                <rect key="frame" x="20" y="162" width="55" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="et3-Ya-ONs">
+                                <rect key="frame" x="139" y="269" width="161" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -481,7 +481,11 @@ The events are highly anticipated and heavily attended by students at the univer
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Check-In" id="e96-cG-GVb">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="rcC-TX-OvA"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="rcC-TX-OvA">
+                            <connections>
+                                <action selector="doneTap:" destination="BYZ-38-t0r" id="wE1-xt-DVL"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="emailTextField" destination="et3-Ya-ONs" id="fb0-nQ-GvJ"/>
