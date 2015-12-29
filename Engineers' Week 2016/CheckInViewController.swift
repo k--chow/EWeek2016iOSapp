@@ -11,6 +11,7 @@ import UIKit
 class CheckInViewController: UIViewController, UIPickerViewDataSource,UIPickerViewDelegate {
     var selectedRow: Int = 0
 
+    @IBOutlet weak var doneButton: UIBarButtonItem!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var organizationPicker: UIPickerView!
     @IBOutlet weak var eventTextField: UITextField!
@@ -91,7 +92,6 @@ class CheckInViewController: UIViewController, UIPickerViewDataSource,UIPickerVi
     }
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return pickerData[row]
-        selectedRow = row
     }
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
@@ -105,13 +105,20 @@ class CheckInViewController: UIViewController, UIPickerViewDataSource,UIPickerVi
     }
     @IBAction func doneTap(sender: AnyObject) {
         //dict here
+        var message : String = ""
+        let alert = UIAlertController(title: "UF EWeek 2016", message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
         if (nameTextField.text!.isEmpty)
         {
-            print("Please enter your name.")
+            message = "Please enter your name."
+            alert.message = message
+            self.presentViewController(alert, animated: true, completion: nil)
         }
         else if (eventTextField.text!.isEmpty)
         {
-            print("Please enter an event code.")
+            message = "Please enter an event code."
+            alert.message = message
+            self.presentViewController(alert, animated: true, completion: nil)
         }/* if (emailTextField.text!.isEmpty)
         {
             print("Please enter an email.")
@@ -124,7 +131,9 @@ class CheckInViewController: UIViewController, UIPickerViewDataSource,UIPickerVi
         let email = emailTextField.text
         let organization = pickerData[selectedRow]
         post(["name": name!, "email": email!, "organization": organization], url: url)
+        navigationController!.popViewControllerAnimated(true)
         }
     }
+    
 
 }
