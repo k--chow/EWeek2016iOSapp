@@ -103,8 +103,14 @@ class CheckInViewController: UIViewController, UIPickerViewDataSource,UIPickerVi
         view.endEditing(true);
         
     }
+    
+    @IBAction func onTap2(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
     @IBAction func doneTap(sender: AnyObject) {
         //dict here
+        let codes = ["ETALK2016", "SHPE2016", "FES2016", "NSBE2016", "WECE2016", "IIE2016", "PSR2016", "SPD2016", "SWE2016", "ESL2016", "SASE2016", "EFEST2016", "ACM2016", "EFAIR12016", "FLEG2016", "EFAIR22016", "GR2016", "ELF2016", "CLO2016"];
         var message : String = ""
         let alert = UIAlertController(title: "UF EWeek 2016", message: message, preferredStyle: UIAlertControllerStyle.Alert)
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
@@ -119,18 +125,28 @@ class CheckInViewController: UIViewController, UIPickerViewDataSource,UIPickerVi
             message = "Please enter an event code."
             alert.message = message
             self.presentViewController(alert, animated: true, completion: nil)
-        }/* if (emailTextField.text!.isEmpty)
+        }
+        else if (emailTextField.text!.isEmpty)
         {
-            print("Please enter an email.")
-        }*/
+            message = "Please enter an email."
+            alert.message = message
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
+        else if (codes.indexOf(eventTextField.text!) == nil)
+        {
+            message = "Please enter a valid event code."
+            alert.message = message
+            self.presentViewController(alert, animated: true, completion: nil)
+            
+        }
         else
         {
         let url = "https://eweek2016.herokuapp.com/api/attendees"
         let name = nameTextField.text
-        //let code = eventTextField.text
+        let code = eventTextField.text
         let email = emailTextField.text
         let organization = pickerData[selectedRow]
-        post(["name": name!, "email": email!, "organization": organization], url: url)
+        post(["name": name!, "email": email!, "organization": organization, "eventcode": code!], url: url)
         navigationController!.popViewControllerAnimated(true)
         }
     }

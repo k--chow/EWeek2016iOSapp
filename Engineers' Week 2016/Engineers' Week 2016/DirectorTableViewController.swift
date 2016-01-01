@@ -14,8 +14,7 @@ class DirectorTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.rowHeight = UITableViewAutomaticDimension;
-        self.tableView.estimatedRowHeight = 138.0;
+        self.tableView.rowHeight = 138.0;
         getDirectors()
     }
     
@@ -51,7 +50,10 @@ class DirectorTableViewController: UITableViewController {
                         
                         self.getImage(director1)
                         self.directors.append(director1)
-                        
+                        dispatch_async(dispatch_get_main_queue(), {
+                            self.tableView.reloadData()
+                        })
+
                         
                     }
                     else
@@ -59,13 +61,15 @@ class DirectorTableViewController: UITableViewController {
                         print(i)
                     }
                 }
-                self.tableView.reloadData()
+                
+                
                 
                 
             } catch {
                 print("bad things happened")
             }
         }).resume()
+        
 
     }
     
@@ -74,8 +78,11 @@ class DirectorTableViewController: UITableViewController {
         let data = NSData(contentsOfURL:url2!)
         if data != nil {
             director.photo = UIImage(data:data!)
-            //print("ho")
-            self.tableView.reloadData()
+            print("ho")
+        }
+        else
+        {
+            print("no")
         }
         
     }

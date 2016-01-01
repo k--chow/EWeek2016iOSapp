@@ -39,37 +39,43 @@ class EventsTableViewController: UITableViewController {
             do {
                 
                 
-                let json: NSArray = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as! NSArray
-                print(json.count)
-                for(var i=0; i<json.count; i++)
-                {
-                if let a = json[i] as? NSDictionary {
-                    let name = a["name"] as? String
-                    let date = a["date"] as? String
-                    let location = a["location"] as? String
-                    let desc = a["description"] as? String
-                    let photoLink = a["image"] as? String
-                    
-                    let event1 = Event(name: name!, photo: nil, date: date!, location: location!, desc: desc!, photoLink: photoLink!, society: "", director: "")!
-                    //check if society exists
-                    if let society = a["society"] as? String {
-                        event1.society = society;
-                    }
-                    //check if director exists
-                    if let director = a["director"] as? String {
-                        event1.director = director;
-                    }
-                    self.getImage(event1)
-                    self.events.append(event1)
-                    
-                    
-                }
-                    else
+                    let json: NSArray = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as! NSArray
+                    print(json.count)
+                    for(var i=0; i<json.count; i++)
                     {
-                    print(i)
+                        if let a = json[i] as? NSDictionary {
+                            let name = a["name"] as? String
+                            let date = a["date"] as? String
+                            let location = a["location"] as? String
+                            let desc = a["description"] as? String
+                            let photoLink = a["image"] as? String
+                            
+                            let event1 = Event(name: name!, photo: nil, date: date!, location: location!, desc: desc!, photoLink: photoLink!, society: "", director: "")!
+                            //check if society exists
+                            if let society = a["society"] as? String {
+                                event1.society = society;
+                            }
+                            //check if director exists
+                            if let director = a["director"] as? String {
+                                event1.director = director;
+                            }
+                            self.getImage(event1)
+                            self.events.append(event1)
+                            dispatch_async(dispatch_get_main_queue(), {
+                                self.tableView.reloadData()
+                            })
+                            
+                        }
+                        else
+                        {
+                            print(i)
+                        }
                     }
-                }
-                self.tableView.reloadData()
+                
+                
+                
+
+                
                 
                 
             } catch {
@@ -124,7 +130,8 @@ class EventsTableViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "ShowDetail")
         {
-            let eventDetailViewController = segue.destinationViewController as! EventViewController
+            print("ShowDetail")
+            let eventDetailViewController = segue.destinationViewController as! EventsViewController
             if let selectedEventCell = sender as? EventsTableViewCell {
                 let indexPath = tableView.indexPathForCell(selectedEventCell)!
                 let selectedEvent = events[indexPath.row]

@@ -15,6 +15,7 @@ class DirectorTableViewCell: UITableViewCell {
     @IBOutlet weak var directorPhoto: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
+        
         // Initialization code
     }
 

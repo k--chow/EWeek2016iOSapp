@@ -1,15 +1,17 @@
 //
-//  EventViewController.swift
+//  EventsViewController.swift
 //  UF EWeek
 //
-//  Created by Kevin Chow on 12/26/15.
+//  Created by Kevin Chow on 12/30/15.
 //  Copyright © 2015 Kevin Chow. All rights reserved.
 //
 
 import UIKit
 
-class EventViewController: UIViewController{
-    /*
+class EventsViewController: UIViewController {
+    var event: Event?
+    
+    @IBOutlet weak var descriptionScroll: UIScrollView!
     @IBOutlet weak var eventSociety: UILabel!
     @IBOutlet weak var eventDirector: UILabel!
     @IBOutlet weak var eventTime: UILabel!
@@ -17,24 +19,25 @@ class EventViewController: UIViewController{
     @IBOutlet weak var eventPhoto: UIImageView!
     
     @IBOutlet weak var eventDescription: UILabel!
-    @IBOutlet weak var navTitle: UINavigationItem!*/
+    @IBOutlet weak var navTitle: UINavigationItem!
     
-    var event: Event?
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        /*
+        descriptionScroll.contentSize.height = 1000
         if let event = event {
             eventDirector.text = event.director
+            if (event.society != "")
+            {
             eventSociety.text = event.society
+            }
             eventDescription.text = event.desc
             eventPhoto.image = event.photo
             eventLocation.text = event.location
             eventTime.text = event.date
             navTitle.title = event.name
-
-    
-        }*/
+            
+            
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -42,6 +45,11 @@ class EventViewController: UIViewController{
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func exit(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
+        print("Exiting")
+    }
+
 
     /*
     // MARK: - Navigation
@@ -52,10 +60,5 @@ class EventViewController: UIViewController{
         // Pass the selected object to the new view controller.
     }
     */
-    /*
-    @IBAction func exit(sender: AnyObject) {
-        dismissViewControllerAnimated(true, completion: nil)
-        print("Exiting")
-    }*/
 
 }
