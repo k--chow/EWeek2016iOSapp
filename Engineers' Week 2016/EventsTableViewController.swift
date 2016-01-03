@@ -58,8 +58,8 @@ class EventsTableViewController: UITableViewController {
                             let location = a["location"] as? String
                             let desc = a["description"] as? String
                             let photoLink = a["image"] as? String
-                            
-                            let event1 = Event(name: name!, photo: nil, date: date!, location: location!, desc: desc!, photoLink: photoLink!, society: "", director: "")!
+                            let photo1 = UIImage(named: "defaultEvent")
+                            let event1 = Event(name: name!, photo: photo1, date: date!, location: location!, desc: desc!, photoLink: photoLink!, society: "", director: "")!
                             //check if society exists
                             if let society = a["society"] as? String {
                                 event1.society = society;
@@ -127,16 +127,14 @@ class EventsTableViewController: UITableViewController {
         let cellIdentifier = "EventsTableViewCell"
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! EventsTableViewCell
         let event = events[indexPath.row]
-        //let photo1 = UIImage(named: "defaultEvent")
-        //cell.eventPhoto.image = photo1
         cell.eventTitle.text = event.name
         cell.eventDate.text = event.date
         cell.eventLocation.text = event.location
         cell.eventSociety.text = event.society
         //cell.eventDesc.text = event.desc
-        dispatch_async(dispatch_get_main_queue(), {
+        //dispatch_async(dispatch_get_main_queue(), {
             cell.eventPhoto.sd_setImageWithURL(NSURL(string: event.photoLink))
-        })
+        //})
         
         event.photo = cell.eventPhoto.image
         return cell

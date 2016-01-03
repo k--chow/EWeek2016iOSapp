@@ -368,11 +368,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EventsTableViewController.swift"
-            timestampString = "473491667.382551"
+            timestampString = "473556473.084609"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "198"
-            endingLineNumber = "198"
+            startingLineNumber = "196"
+            endingLineNumber = "196"
             landmarkName = "EventsTableViewController"
             landmarkType = "3">
          </BreakpointContent>
