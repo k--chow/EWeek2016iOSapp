@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class EventsTableViewController: UITableViewController {
     var events = [Event]()
@@ -14,7 +15,15 @@ class EventsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        getEvents()
+        if events.count == 0 {
+            print(events.count)
+            getEvents()
+            
+        }
+        else
+        {
+            print("nah")
+        }
         //getImage()
         //loadSampleEvents()
     }
@@ -59,7 +68,7 @@ class EventsTableViewController: UITableViewController {
                             if let director = a["director"] as? String {
                                 event1.director = director;
                             }
-                            self.getImage(event1)
+                            //self.getImage(event1)
                             self.events.append(event1)
                             dispatch_async(dispatch_get_main_queue(), {
                                 self.tableView.reloadData()
@@ -118,12 +127,18 @@ class EventsTableViewController: UITableViewController {
         let cellIdentifier = "EventsTableViewCell"
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! EventsTableViewCell
         let event = events[indexPath.row]
+        //let photo1 = UIImage(named: "defaultEvent")
+        //cell.eventPhoto.image = photo1
         cell.eventTitle.text = event.name
         cell.eventDate.text = event.date
         cell.eventLocation.text = event.location
         cell.eventSociety.text = event.society
         //cell.eventDesc.text = event.desc
-        cell.eventPhoto.image = event.photo
+        dispatch_async(dispatch_get_main_queue(), {
+            cell.eventPhoto.sd_setImageWithURL(NSURL(string: event.photoLink))
+        })
+        
+        event.photo = cell.eventPhoto.image
         return cell
     }
     

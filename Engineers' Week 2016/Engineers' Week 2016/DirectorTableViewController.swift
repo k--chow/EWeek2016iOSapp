@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class DirectorTableViewController: UITableViewController {
 
@@ -45,10 +46,10 @@ class DirectorTableViewController: UITableViewController {
                         let position = a["position"] as? String
                         let photoLink = a["image"] as? String
                         
+                        let photo1 = UIImage(named: "defaultEvent")
+                        let director1 = Director(name: name!, photo: photo1, photoLink: photoLink!, position: position!)!
                         
-                        let director1 = Director(name: name!, photo: nil, photoLink: photoLink!, position: position!)!
-                        
-                        self.getImage(director1)
+                        //self.getImage(director1)
                         self.directors.append(director1)
                         dispatch_async(dispatch_get_main_queue(), {
                             self.tableView.reloadData()
@@ -110,6 +111,7 @@ class DirectorTableViewController: UITableViewController {
         cell.directorName.text = director.name
         cell.directorPosition.text = director.position
         cell.directorPhoto.image = director.photo
+        cell.directorPhoto.sd_setImageWithURL(NSURL(string: director.photoLink))
         return cell
     }
     
