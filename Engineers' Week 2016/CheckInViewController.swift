@@ -11,6 +11,7 @@ import UIKit
 class CheckInViewController: UIViewController, UIPickerViewDataSource,UIPickerViewDelegate {
     var selectedRow: Int = 0
 
+    @IBOutlet weak var checkinScroll: UIScrollView!
     @IBOutlet weak var doneButton: UIBarButtonItem!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var organizationPicker: UIPickerView!
@@ -21,7 +22,7 @@ class CheckInViewController: UIViewController, UIPickerViewDataSource,UIPickerVi
         super.viewDidLoad()
         organizationPicker.dataSource = self
         organizationPicker.delegate = self
-        
+        checkinScroll.contentSize.height = 700
         
             
     }
@@ -103,10 +104,10 @@ class CheckInViewController: UIViewController, UIPickerViewDataSource,UIPickerVi
         view.endEditing(true);
         
     }
-    
+    /*
     @IBAction func onTap2(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
-    }
+    }*/
     
     @IBAction func doneTap(sender: AnyObject) {
         //dict here
