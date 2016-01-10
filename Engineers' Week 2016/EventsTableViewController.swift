@@ -12,9 +12,11 @@ import SDWebImage
 class EventsTableViewController: UITableViewController {
     var events = [Event]()
     
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController!.navigationBar.barTintColor = UIColor.greenColor()
         if events.count == 0 {
             print(events.count)
             getEvents()
