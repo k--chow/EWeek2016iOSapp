@@ -11,6 +11,7 @@ import UIKit
 class EventsViewController: UIViewController {
     var event: Event?
     
+    @IBOutlet weak var NavBar: UINavigationBar!
     @IBOutlet weak var descriptionScroll: UIScrollView!
     @IBOutlet weak var eventSociety: UILabel!
     @IBOutlet weak var eventDirector: UILabel!
@@ -23,6 +24,7 @@ class EventsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        NavBar.barTintColor = UIColor(red: 0, green: 0.3529, blue: 0.7882, alpha: 1.0)
         descriptionScroll.contentSize.height = 1000
         if let event = event {
             eventDirector.text = event.director

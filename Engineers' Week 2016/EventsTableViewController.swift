@@ -16,7 +16,8 @@ class EventsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController!.navigationBar.barTintColor = UIColor.greenColor()
+        navigationController!.navigationBar.barTintColor = UIColor(red: 0, green: 0.3529, blue: 0.7882, alpha: 1.0)
+        navigationController!.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor()]
         if events.count == 0 {
             print(events.count)
             getEvents()

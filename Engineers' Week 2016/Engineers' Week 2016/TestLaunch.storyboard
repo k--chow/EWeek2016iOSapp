@@ -21,13 +21,13 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="fHz-mL-BpP">
                                 <rect key="frame" x="-4" y="0.0" width="328" height="568"/>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Copyright © 2015 Kevin Chow. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="obG-Y5-kRd">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="  Copyright © 2015 Kevin Chow. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="obG-Y5-kRd">
                                 <rect key="frame" x="20" y="527" width="280" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="real" translatesAutoresizingMaskIntoConstraints="NO" id="d57-eg-OLy">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="real" translatesAutoresizingMaskIntoConstraints="NO" id="d57-eg-OLy">
                                 <rect key="frame" x="20" y="178" width="280" height="212"/>
                             </imageView>
                         </subviews>
@@ -42,7 +42,11 @@
                             <constraint firstItem="obG-Y5-kRd" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="20" symbolic="YES" id="SfN-ll-jLj"/>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="fHz-mL-BpP" secondAttribute="bottom" id="Vve-hV-sm2"/>
                             <constraint firstAttribute="bottom" secondItem="obG-Y5-kRd" secondAttribute="bottom" constant="20" id="Y44-ml-fuU"/>
+                            <constraint firstItem="d57-eg-OLy" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" id="Znl-rF-YJg"/>
+                            <constraint firstItem="d57-eg-OLy" firstAttribute="trailing" secondItem="Ze5-6b-2t3" secondAttribute="trailingMargin" id="eTe-CU-kPq"/>
+                            <constraint firstItem="d57-eg-OLy" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="158" id="eu3-Qb-8PT"/>
                             <constraint firstItem="fHz-mL-BpP" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="topMargin" id="f5y-lV-Nhn"/>
+                            <constraint firstItem="obG-Y5-kRd" firstAttribute="top" secondItem="d57-eg-OLy" secondAttribute="bottom" constant="137" id="rZQ-ka-Ovc"/>
                         </constraints>
                     </view>
                 </viewController>

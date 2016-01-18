@@ -11,6 +11,8 @@
 		3079D6691C2F254800BEA267 /* DirectorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3079D6681C2F254800BEA267 /* DirectorTableViewCell.swift */; };
 		3079D66B1C2F255C00BEA267 /* Director.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3079D66A1C2F255C00BEA267 /* Director.swift */; };
 		307C39391C349C4800929AE2 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307C39381C349C4800929AE2 /* EventsViewController.swift */; };
+		307CA04E1C42264500557495 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307CA04D1C42264500557495 /* MainViewController.swift */; };
+		307CA0501C4226F200557495 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307CA04F1C4226F200557495 /* MainTableViewController.swift */; };
 		308475B81C306CA200737A57 /* CheckInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308475B71C306CA200737A57 /* CheckInViewController.swift */; };
 		308475BC1C3388CC00737A57 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308475BB1C3388CC00737A57 /* AboutViewController.swift */; };
 		30CBB76A1C2659970034F617 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CBB7691C2659970034F617 /* AppDelegate.swift */; };
@@ -43,6 +45,8 @@
 		3079D66A1C2F255C00BEA267 /* Director.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Director.swift; sourceTree = "<group>"; };
 		307C39381C349C4800929AE2 /* EventsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventsViewController.swift; path = ../EventsViewController.swift; sourceTree = "<group>"; };
 		307CA0491C38AFFA00557495 /* UF EWeek-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UF EWeek-Bridging-Header.h"; sourceTree = "<group>"; };
+		307CA04D1C42264500557495 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		307CA04F1C4226F200557495 /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		308475B71C306CA200737A57 /* CheckInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CheckInViewController.swift; path = ../CheckInViewController.swift; sourceTree = "<group>"; };
 		308475BB1C3388CC00737A57 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AboutViewController.swift; path = ../AboutViewController.swift; sourceTree = "<group>"; };
 		30CBB7661C2659970034F617 /* UF EWeek.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UF EWeek.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,6 +124,8 @@
 				30CBB7911C28EE8B0034F617 /* Event.swift */,
 				307C39381C349C4800929AE2 /* EventsViewController.swift */,
 				30CBB7991C28FC040034F617 /* EventsTableViewController.swift */,
+				307CA04D1C42264500557495 /* MainViewController.swift */,
+				307CA04F1C4226F200557495 /* MainTableViewController.swift */,
 				30CBB7971C28FB990034F617 /* EventsTableViewCell.swift */,
 				30CBB7951C28FB7F0034F617 /* DashTableViewController.swift */,
 				30CBB79D1C28FE210034F617 /* CategoryTableViewCell.swift */,
@@ -316,11 +322,13 @@
 				30D71D321C2C709B00F1C8F1 /* EventsTableViewCell.swift in Sources */,
 				30CBB7961C28FB7F0034F617 /* DashTableViewController.swift in Sources */,
 				3079D6691C2F254800BEA267 /* DirectorTableViewCell.swift in Sources */,
+				307CA04E1C42264500557495 /* MainViewController.swift in Sources */,
 				30CBB79C1C28FC540034F617 /* Category.swift in Sources */,
 				30CBB79E1C28FE210034F617 /* CategoryTableViewCell.swift in Sources */,
 				308475B81C306CA200737A57 /* CheckInViewController.swift in Sources */,
 				307C39391C349C4800929AE2 /* EventsViewController.swift in Sources */,
 				308475BC1C3388CC00737A57 /* AboutViewController.swift in Sources */,
+				307CA0501C4226F200557495 /* MainTableViewController.swift in Sources */,
 				3079D66B1C2F255C00BEA267 /* Director.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
